@@ -12,27 +12,27 @@ public class ColaDigimon {
 
     public void mostrar (){
         System.out.println(digimons.peek());
+        System.out.println(digimons.element());
     }
 
     public void R1(ArrayList<Digimon> digimones){
         for(int i = 0; i<5; i++){
             digimons.add(digimones.get(i));
-            System.out.println("Tamaño de la lista: " + digimons.peek());
-            System.out.println(digimons.size());
         }
     }
 
-    public  void R2(ArrayList<Digimon> digimones){
+    public  void R2(ArrayList<Digimon> digimones, JTextArea txt_poder){
         for (int i = 0; i<5; i++){
             if (digimones.get(i).getTipo().equals("Fuego")) {
                 digimones.get(i).setNivelpoder(digimones.get(i).getNivelpoder() * 1.3);
-            } else if (digimones.get(i).getTipo().equals("Agua")) {
+            } else if (digimones.get(i).getTipo().equals("Hielo")) {
                 digimones.get(i).setNivelpoder(digimones.get(i).getNivelpoder() * 1.5);
             } else if (digimones.get(i).getTipo().equals("Planta")) {
                 digimones.get(i).setNivelpoder(digimones.get(i).getNivelpoder() * 1.2);
             } else {
                 digimones.get(i).setNivelpoder(digimones.get(i).getNivelpoder() * 1);
             }
+            txt_poder.append("• "+digimones.get(i).toString());
         }
     }
 

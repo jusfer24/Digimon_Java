@@ -18,8 +18,11 @@ public class Main {
         ColaDigimon cola = new ColaDigimon();
 
         cola.R1(digimones);
-        cola.R2(digimones);
+
+        System.out.println(digimones);
         cola.mostrar();
-        cola.R3(digimones);
+//        cola.R3(digimones);
+        cola.R4(digimones);
+        cola.R1(digimones);
     }
 }

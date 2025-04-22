@@ -55,12 +55,8 @@ public class Digimon {
 
     @Override
     public String toString() {
-        return "Digimon{" +
-                "nombre='" + nombre + '\'' +
-                ", tipo='" + tipo + '\'' +
-                ", nivelpoder=" + nivelpoder +
-                ", habilidad='" + habilidad + '\'' +
-                ", estado='" + estado + '\'' +
-                '}';
+        return  "Nombre: " + nombre + '\n' +
+                "Tipo: " + tipo + '\n' +
+                "Nivel de poder: " + nivelpoder + '\n';
     }
 }
