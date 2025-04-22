@@ -46,7 +46,7 @@ public class ColaDigimon {
     }
 
     public void R4(ArrayList<Digimon> digimones){
-        if (){
+        if ("Hello world"){
 
         }
     }
