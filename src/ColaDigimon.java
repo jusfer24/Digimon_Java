@@ -36,11 +36,12 @@ public class ColaDigimon {
         }
     }
 
-    public void R3(ArrayList<Digimon> digimones, JTextField search, Queue<Digimon> cola2){
+    public void R3(ArrayList<Digimon> digimones, JTextArea search, Queue<Digimon> cola2){
         String especial = search.getText();
         for (int i = 0; i<5; i++){
             if (digimones.get(i).getHabilidad().equals(especial)){
                 cola2.add(digimones.get(i));
+                search.setText(digimones.get(i).toString());
             }
         }
     }

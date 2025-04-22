@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Queue;
 
 public class DigimonGUI {
     private JButton encolarButton;
@@ -12,6 +14,7 @@ public class DigimonGUI {
     private JTextArea listaDigimons;
     private JTextArea listaR4;
     private JTextArea cola5Digimons;
+    private JButton button_buscar;
 
     public DigimonGUI() {
         Digimon d1 = new Digimon();
@@ -26,6 +29,7 @@ public class DigimonGUI {
         digimones.add(d4);
         digimones.add(d5);
         ColaDigimon cola = new ColaDigimon();
+        Queue<Digimon> cola2 = new ArrayDeque<>();
 
         calpoderButton.addActionListener(new ActionListener() {
             @Override
@@ -35,6 +39,17 @@ public class DigimonGUI {
             }
         });
 
+        button_buscar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                BusquedaGUI searchPanel = new BusquedaGUI(cola, digimones,cola2);
+                JFrame frame = new JFrame("Buscar Digimon");
+                frame.setContentPane(searchPanel.getJPane_Busqueda());
+                frame.pack(); // ajusta al contenido
+                frame.setLocationRelativeTo(null); // centra la ventana
+                frame.setVisible(true);
+            }
+        });
     }
     public static void main(String[] args) {
         JFrame frame = new JFrame("DigimonGUI");
