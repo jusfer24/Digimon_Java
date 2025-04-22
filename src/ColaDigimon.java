@@ -15,7 +15,6 @@ public class ColaDigimon {
         System.out.println("Element: " + digimons.element());
     }
 
-    // Versión para GUI con JTextArea
     public void R1(ArrayList<Digimon> digimones, JTextArea area) {
         for (int i = 0; i < 5 && i < digimones.size(); i++) {
             this.digimons.add(digimones.get(i));
@@ -25,7 +24,6 @@ public class ColaDigimon {
         }
     }
 
-    // Versión para consola (Main.java)
     public void R1(ArrayList<Digimon> digimones) {
         for (int i = 0; i < 5 && i < digimones.size(); i++) {
             this.digimons.add(digimones.get(i));
@@ -46,16 +44,15 @@ public class ColaDigimon {
         }
     }
 
-    public void R3(ArrayList<Digimon> digimones, JTextField search, Queue<Digimon> cola2) {
-        String especial = search.getText();
+    public void R3(ArrayList<Digimon> digimones,JTextField buscar, JTextArea txt_search, Queue<Digimon> cola2) {
+        String especial = buscar.getText();
         for (int i = 0; i < 5; i++) {
             if (digimones.get(i).getHabilidad().equals(especial)) {
                 cola2.add(digimones.get(i));
+                txt_search.setText(digimones.get(i).toString());
             }
         }
     }
-
-
 
     public ArrayList<Digimon> R4(ArrayList<Digimon> digimones) {
         ArrayList<Digimon> evolucionados = new ArrayList<>();

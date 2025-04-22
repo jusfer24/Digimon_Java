@@ -60,4 +60,4 @@ public class Digimon {
                 "Nivel de poder: " + nivelpoder + '\n';
     }
 }
-/
+

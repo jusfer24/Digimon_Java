@@ -15,7 +15,7 @@ public class BusquedaGUI extends JFrame {
         buscarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                cola.R3(digimones,getTextRsultado(),cola2);
+                cola.R3(digimones,textHabilidades, textRsultado,cola2);
             }
         });
     }
