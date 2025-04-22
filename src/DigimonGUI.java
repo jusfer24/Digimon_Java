@@ -8,4 +8,6 @@ public class DigimonGUI {
     private JComboBox R3lista;
     private JButton EvolucionButton;
     private JList Resultadolistado;
+
+
 }

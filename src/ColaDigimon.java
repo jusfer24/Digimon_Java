@@ -46,8 +46,13 @@ public class ColaDigimon {
     }
 
     public void R4(ArrayList<Digimon> digimones){
-        if ("Hello world"){
-
+        for (int i = 0; i < 5; i++) {
+            if (digimones.get(i).getNivelpoder() > 200 || digimones.get(i).getHabilidad().equals("Flama bebe")){
+                digimones.get(i).setNivelpoder(digimones.get(i).getNivelpoder()*100.5);
+                digimones.get(i).setNombre("Ultra " + digimones.get(i).getNombre());
+                digimones.get(i).setEstado("Evolucionado");
+            }
         }
     }
+
 }
